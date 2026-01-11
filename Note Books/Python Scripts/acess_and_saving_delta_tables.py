@@ -68,4 +68,3 @@ spark.sql("SHOW TABLES")
 # MAGIC %sql
 # MAGIC USE CATALOG delta_tables;
 # MAGIC USE SCHEMA humanresource;
-# MAGIC
