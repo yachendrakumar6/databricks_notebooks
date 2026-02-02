@@ -56,3 +56,17 @@ df_from_json.select(
     from_json(col("emp_json"), schema_df).alias("emp_struct")
 ).select("emp_id", "emp_struct.*").show()
 
+
+# COMMAND ----------
+
+df_get_json_object = df_from_json.select(
+    "emp_id",
+    get_json_object(col("emp_json"), "$.name").alias("name"),
+    get_json_object(col("emp_json"), "$.dept").alias("dept"),
+    get_json_object(col("emp_json"), "$.age").alias("age"),
+    get_json_object(col("emp_json"), "$.salary").alias("salary")
+
+)
+
+display(df_get_json_object)
+
