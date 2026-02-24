@@ -61,11 +61,11 @@ df = spark.read.format("csv").option("header", True).option("inferSchema", "true
 from pyspark.sql.functions import col, upper
 
 df_select_expr = df.selectExpr("JobTitle as job_title", "VacationHours * 1.5 as vacation_hours")
-#display(df_select_expr)
+display(df_select_expr)
 
-df_upper_case = df_select_expr.selectExpr("upper(job_title)" ,"vacation_hours")
+# df_upper_case = df_select_expr.selectExpr("upper(job_title)" ,"vacation_hours")
 #display(df_upper_case)
 
-df_case = df_upper_case.selectExpr("CASE WHEN vacation_hours >= 20.0 THEN 'Yes' ELSE 'No' END")
-display(df_case)
+# df_case = df_upper_case.selectExpr("CASE WHEN vacation_hours >= 20.0 THEN 'Yes' ELSE 'No' END")
+# display(df_case)
 

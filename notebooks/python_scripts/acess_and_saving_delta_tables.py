@@ -3,9 +3,6 @@ df = spark.read.format("csv").load("/Volumes/workspace/default/adventure_works/H
 
 spark.sql("USE CATALOG delta_tables")
 
-
-
-
 # COMMAND ----------
 
 # MAGIC %sql
@@ -17,8 +14,6 @@ spark.sql("USE CATALOG delta_tables")
 # MAGIC CREATE SCHEMA IF NOT EXISTS Person;
 # MAGIC CREATE SCHEMA IF NOT EXISTS Production;
 # MAGIC CREATE SCHEMA IF NOT EXISTS Purchase;
-# MAGIC
-# MAGIC
 
 # COMMAND ----------
 
